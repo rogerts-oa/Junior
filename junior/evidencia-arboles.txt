@@ -1,0 +1,39 @@
+
+=== 01.jr — válido ===
+(individual (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor a)) + (termino (factor b) * (factor 3)) + (termino (factor 1)) - (termino (factor 6))))) ;) <EOF>)
+
+=== 02.jr — válido ===
+(individual (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor a)) + (termino (factor b) * (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 3)) + (termino (factor 1))))) ))) - (termino (factor 6))))) ;) <EOF>)
+
+=== 03.jr — válido ===
+(individual (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 3)) + (termino (factor 4))))) )) * (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 2)) - (termino (factor 1))))) ))))))) <EOF>)
+
+=== 04.jr — válido ===
+(individual (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor 10)) + (termino (factor valor) * (factor 4)))))) <EOF>)
+
+=== 05.jr — válido ===
+(individual (instruccion (asignacion x = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)))))) ;) <EOF>)
+
+=== 06.jr — válido ===
+(individual (instruccion (asignacion result = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)) + (termino (factor 3) * (factor 4)) + (termino (factor 2) / (factor 3))))))) <EOF>)
+
+=== 07.jr — válido ===
+(individual (instruccion (asignacion x = (expresion (expresion_relacional (expresion_aditiva (termino (factor 10)) + (termino (factor y))))))) <EOF>)
+
+=== 08.jr — válido ===
+(individual (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor 10))) > (expresion_aditiva (termino (factor 4)))))) <EOF>)
+
+=== 09.jr — válido ===
+(individual (instruccion (asignacion Y = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)) + (termino (factor 2))) > (expresion_aditiva (termino (factor 3) * (factor 4))))))) <EOF>)
+
+=== 10.jr — válido ===
+(individual (instruccion (asignacion z = (expresion (expresion_relacional (expresion_aditiva (termino (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 20)) - (termino (factor valor))))) )) / (factor 5)) + (termino (factor 3))))))) <EOF>)
+
+=== 11.jr — válido ===
+(individual (instruccion (asignacion X = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)) + (termino (factor 3) * (factor 2))))))) <EOF>)
+
+=== 12.jr — válido ===
+(individual (instruccion (sentencia_if if ( (expresion (expresion_relacional (expresion_aditiva (termino (factor x))) > (expresion_aditiva (termino (factor 0))))) ) { (instruccion (asignacion y = (expresion (expresion_relacional (expresion_aditiva (termino (factor y)) + (termino (factor 1))))))) })) <EOF>)
+
+=== programa.jr — válido ===
+(programa (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor a)) + (termino (factor b) * (factor 3)) + (termino (factor 1)) - (termino (factor 6))))) ;) (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor a)) + (termino (factor b) * (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 3)) + (termino (factor 1))))) ))) - (termino (factor 6))))) ;) (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 3)) + (termino (factor 4))))) )) * (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 2)) - (termino (factor 1))))) ))))))) (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor 10)) + (termino (factor valor) * (factor 4)))))) (instruccion (asignacion x = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)))))) ;) (instruccion (asignacion result = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)) + (termino (factor 3) * (factor 4)) + (termino (factor 2) / (factor 3))))))) (instruccion (asignacion x = (expresion (expresion_relacional (expresion_aditiva (termino (factor 10)) + (termino (factor y))))))) (instruccion (expresion (expresion_relacional (expresion_aditiva (termino (factor 10))) > (expresion_aditiva (termino (factor 4)))))) (instruccion (asignacion Y = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)) + (termino (factor 2))) > (expresion_aditiva (termino (factor 3) * (factor 4))))))) (instruccion (asignacion z = (expresion (expresion_relacional (expresion_aditiva (termino (factor ( (expresion (expresion_relacional (expresion_aditiva (termino (factor 20)) - (termino (factor valor))))) )) / (factor 5)) + (termino (factor 3))))))) (instruccion (asignacion X = (expresion (expresion_relacional (expresion_aditiva (termino (factor 5)) + (termino (factor 3) * (factor 2))))))) (instruccion (sentencia_if if ( (expresion (expresion_relacional (expresion_aditiva (termino (factor x))) > (expresion_aditiva (termino (factor 0))))) ) { (instruccion (asignacion y = (expresion (expresion_relacional (expresion_aditiva (termino (factor y)) + (termino (factor 1))))))) })) <EOF>)
