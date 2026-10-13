@@ -29,17 +29,53 @@ public interface EjerciciosVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitInstruccion(EjerciciosParser.InstruccionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link EjerciciosParser#bloque}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBloque(EjerciciosParser.BloqueContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link EjerciciosParser#sentencia_if}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitSentencia_if(EjerciciosParser.Sentencia_ifContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link EjerciciosParser#sentencia_for}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSentencia_for(EjerciciosParser.Sentencia_forContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EjerciciosParser#declaracion}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclaracion(EjerciciosParser.DeclaracionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EjerciciosParser#tipo}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTipo(EjerciciosParser.TipoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EjerciciosParser#impresion}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImpresion(EjerciciosParser.ImpresionContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link EjerciciosParser#asignacion}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitAsignacion(EjerciciosParser.AsignacionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EjerciciosParser#incremento}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIncremento(EjerciciosParser.IncrementoContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EjerciciosParser#expresion}.
 	 * @param ctx the parse tree

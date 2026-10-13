@@ -38,6 +38,16 @@ public interface EjerciciosListener extends ParseTreeListener {
 	 */
 	void exitInstruccion(EjerciciosParser.InstruccionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link EjerciciosParser#bloque}.
+	 * @param ctx the parse tree
+	 */
+	void enterBloque(EjerciciosParser.BloqueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EjerciciosParser#bloque}.
+	 * @param ctx the parse tree
+	 */
+	void exitBloque(EjerciciosParser.BloqueContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link EjerciciosParser#sentencia_if}.
 	 * @param ctx the parse tree
 	 */
@@ -48,6 +58,46 @@ public interface EjerciciosListener extends ParseTreeListener {
 	 */
 	void exitSentencia_if(EjerciciosParser.Sentencia_ifContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link EjerciciosParser#sentencia_for}.
+	 * @param ctx the parse tree
+	 */
+	void enterSentencia_for(EjerciciosParser.Sentencia_forContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EjerciciosParser#sentencia_for}.
+	 * @param ctx the parse tree
+	 */
+	void exitSentencia_for(EjerciciosParser.Sentencia_forContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EjerciciosParser#declaracion}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclaracion(EjerciciosParser.DeclaracionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EjerciciosParser#declaracion}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclaracion(EjerciciosParser.DeclaracionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EjerciciosParser#tipo}.
+	 * @param ctx the parse tree
+	 */
+	void enterTipo(EjerciciosParser.TipoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EjerciciosParser#tipo}.
+	 * @param ctx the parse tree
+	 */
+	void exitTipo(EjerciciosParser.TipoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EjerciciosParser#impresion}.
+	 * @param ctx the parse tree
+	 */
+	void enterImpresion(EjerciciosParser.ImpresionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EjerciciosParser#impresion}.
+	 * @param ctx the parse tree
+	 */
+	void exitImpresion(EjerciciosParser.ImpresionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link EjerciciosParser#asignacion}.
 	 * @param ctx the parse tree
 	 */
@@ -57,6 +107,16 @@ public interface EjerciciosListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAsignacion(EjerciciosParser.AsignacionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EjerciciosParser#incremento}.
+	 * @param ctx the parse tree
+	 */
+	void enterIncremento(EjerciciosParser.IncrementoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EjerciciosParser#incremento}.
+	 * @param ctx the parse tree
+	 */
+	void exitIncremento(EjerciciosParser.IncrementoContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link EjerciciosParser#expresion}.
 	 * @param ctx the parse tree
