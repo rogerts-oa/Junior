@@ -1,6 +1,7 @@
 package com.junior;
 
 import java.io.IOException;
+
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -19,6 +20,17 @@ public class Main {
             CharStream in = CharStreams.fromFileName(DIRBASE + file);
             JuniorLexer lexer = new JuniorLexer(in);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
+
+            tokens.fill();
+            System.out.println("TOKENS");
+            tokens.getTokens().forEach(token->{
+                System.out.println(
+                    "Texto: " + token.getText() + 
+                    "| Tipo: " + JuniorLexer.VOCABULARY.getSymbolicName(token.getType()) +
+                    "| Ln: " + token.getLine() + ", Col " + token.getCharPositionInLine()
+                );
+            });
+
             JuniorParser parser = new JuniorParser(tokens);
             JuniorParser.StartContext tree = parser.start();
             JuniorCustomVisitor visitor = new JuniorCustomVisitor();
