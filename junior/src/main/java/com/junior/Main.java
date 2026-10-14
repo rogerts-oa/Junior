@@ -1,7 +1,10 @@
 package com.junior;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
+import org.antlr.v4.gui.Trees;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -13,12 +16,16 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         String files[] = args.length==0? new String[]{ "test." + EXTENSION } : args;
-        System.out.println("Dirbase: " + DIRBASE);
+        Path base = Path.of(DIRBASE);
+        if (!Files.isDirectory(base)) {
+            base = Path.of("junior").resolve(DIRBASE);
+        }
+        System.out.println("Dirbase: " + base.toAbsolutePath());
         for (String file : files){
             System.out.println("START: " + file);
 
-            CharStream in = CharStreams.fromFileName(DIRBASE + file);
-            JuniorLexer lexer = new JuniorLexer(in);
+            CharStream in = CharStreams.fromPath(base.resolve(file));
+            EjerciciosLexer lexer = new EjerciciosLexer(in);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
 
             tokens.fill();
@@ -26,15 +33,19 @@ public class Main {
             tokens.getTokens().forEach(token->{
                 System.out.println(
                     "Texto: " + token.getText() + 
-                    "| Tipo: " + JuniorLexer.VOCABULARY.getSymbolicName(token.getType()) +
+                    "| Tipo: " + EjerciciosLexer.VOCABULARY.getSymbolicName(token.getType()) +
                     "| Ln: " + token.getLine() + ", Col " + token.getCharPositionInLine()
                 );
             });
 
-            JuniorParser parser = new JuniorParser(tokens);
-            JuniorParser.StartContext tree = parser.start();
-            JuniorCustomVisitor visitor = new JuniorCustomVisitor();
-            visitor.visit(tree);
+            EjerciciosParser parser = new EjerciciosParser(tokens);
+            EjerciciosParser.ProgramaContext tree = parser.programa();
+            if (parser.getNumberOfSyntaxErrors() > 0) {
+                throw new IllegalArgumentException("Sintaxis inválida: " + file);
+            }
+            System.out.println("ARBOL");
+            System.out.println(tree.toStringTree(parser));
+            Trees.inspect(tree, parser);
 
             System.out.println("FINISH: " + file);
         }

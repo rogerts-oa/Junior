@@ -18,16 +18,6 @@ public interface EjerciciosListener extends ParseTreeListener {
 	 */
 	void exitPrograma(EjerciciosParser.ProgramaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link EjerciciosParser#individual}.
-	 * @param ctx the parse tree
-	 */
-	void enterIndividual(EjerciciosParser.IndividualContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EjerciciosParser#individual}.
-	 * @param ctx the parse tree
-	 */
-	void exitIndividual(EjerciciosParser.IndividualContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link EjerciciosParser#instruccion}.
 	 * @param ctx the parse tree
 	 */

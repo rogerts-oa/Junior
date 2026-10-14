@@ -28,18 +28,6 @@ public class EjerciciosBaseListener implements EjerciciosListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIndividual(EjerciciosParser.IndividualContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIndividual(EjerciciosParser.IndividualContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterInstruccion(EjerciciosParser.InstruccionContext ctx) { }
 	/**
 	 * {@inheritDoc}

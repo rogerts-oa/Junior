@@ -1,7 +1,6 @@
 grammar Ejercicios;
 
-programa : instruccion+ EOF;
-individual : instruccion EOF;
+programa : instruccion +;
 instruccion
     : sentencia_if
     | sentencia_for

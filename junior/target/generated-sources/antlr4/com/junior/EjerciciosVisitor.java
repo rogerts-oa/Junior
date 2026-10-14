@@ -17,12 +17,6 @@ public interface EjerciciosVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPrograma(EjerciciosParser.ProgramaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EjerciciosParser#individual}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIndividual(EjerciciosParser.IndividualContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link EjerciciosParser#instruccion}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
